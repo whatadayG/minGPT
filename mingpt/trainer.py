@@ -63,6 +63,7 @@ class Trainer:
 
         # setup the optimizer
         self.optimizer = model.configure_optimizers(config)
+        # self.optimizer = torch.optim.AdamW(optim_groups, lr=train_config.learning_rate, betas=train_config.betas)
 
         # setup the dataloader
         train_loader = DataLoader(
